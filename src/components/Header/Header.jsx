@@ -1,5 +1,3 @@
-import { Routes, Route } from 'react-router-dom';
-
 import { Container } from '../Container/Conteiner';
 import { Button } from '../Button/Button';
 
@@ -16,19 +14,9 @@ import {
  BtnWrap,
  Link,
  HeaderDecoration,
- Image,
- ImageL,
 } from './Header.styled';
 
-import imageDesktop from '../../images/header/bg-header@1x.png';
-import imageDesktopRetina from '../../images/header/bg-header@2x.png';
-
-import imageDesktopL from '../../images/header/bg-header-l@1x.png';
-import imageDesktopLRetina from '../../images/header/bg-header-l@2x.png';
-
 const Header = () => {
- const isRetina = window.devicePixelRatio > 1;
-
  return (
   <HeaderWrap id="home">
    <Container>
@@ -70,27 +58,6 @@ const Header = () => {
       <Button variant="secondary" text={'Login'} />
      </BtnWrap>
      <BurgerMenu />
-     <Routes>
-      <Route
-       path="/"
-       element={
-        <ImageL
-         src={isRetina ? imageDesktopLRetina : imageDesktopL}
-         alt="Header decoration"
-        />
-       }
-      />
-      <Route
-       path="/blog"
-       element={
-        <Image
-         src={isRetina ? imageDesktopRetina : imageDesktop}
-         alt="Header decoration"
-        />
-       }
-      />
-      <Route path="*" />
-     </Routes>
     </HeaderDecoration>
    </Container>
   </HeaderWrap>

@@ -102,36 +102,3 @@ export const HeaderDecoration = styled.div`
  display: flex;
  position: relative;
 `;
-
-export const Image = styled.img`
- display: none;
- @media screen and (min-width: 1200px) {
-  display: flex;
-  z-index: -2;
-  position: absolute;
-  width: 393px;
-  top: 151%;
-  left: 99%;
-  transform: translate(-50%, -50%);
- }
- @media screen and (min-width: 1920px) {
-  width: 481px;
-  top: 190%;
- }
-`;
-export const ImageL = styled.img`
- display: none;
- @media screen and (min-width: 1200px) {
-  display: flex;
-  z-index: -2;
-  position: absolute;
-  width: 422px;
-  top: 440%;
-  left: 101%;
-  transform: translate(-50%, -50%);
- }
- @media screen and (min-width: 1920px) {
-  width: 481px;
-  top: 500%;
- }
-`;
