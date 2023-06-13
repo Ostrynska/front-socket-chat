@@ -15,37 +15,13 @@ export const ButtonStyle = styled.button`
  transition: ${mainVars.transitions.main};
 `;
 
-export const PrimaryButton = styled(ButtonStyle)`
- display: inline-block;
- color: ${mainVars.colors.whiteColor};
- padding: 28px 60px 29px;
- background-color: ${mainVars.colors.headerColor};
- &:hover {
-  color: ${mainVars.colors.whiteColor};
-  background-color: ${mainVars.colors.primaryColor};
- }
-`;
-
 export const SecondaryButton = styled(ButtonStyle)`
  display: inline-block;
- color: ${mainVars.colors.titleColor};
+ color: ${mainVars.colors.whiteColor};
  padding: 28px 66px 29px;
- background-color: ${mainVars.colors.greyColor};
+ background-color: ${mainVars.colors.titleColor};
  &:hover {
-  color: ${mainVars.colors.whiteColor};
-  background-color: ${mainVars.colors.secondaryColor};
- }
-`;
-
-export const SecondaryButtonIcon = styled(ButtonStyle)`
- display: flex;
- align-items: center;
- color: ${mainVars.colors.titleColor};
- padding: 23px 42px;
- height: 86px;
- background-color: ${mainVars.colors.greyColor};
- &:hover {
-  color: ${mainVars.colors.whiteColor};
-  background-color: ${mainVars.colors.secondaryColor};
+  color: ${mainVars.colors.textColor};
+  background-color: ${mainVars.colors.greyColor};
  }
 `;

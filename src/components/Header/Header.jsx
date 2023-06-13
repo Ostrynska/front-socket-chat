@@ -55,7 +55,7 @@ const Header = () => {
       </MenuList>
      </HeaderNav>
      <BtnWrap>
-      <Button variant="secondary" text={'Login'} />
+      <Button variant="secondary" text={'Blog'} />
      </BtnWrap>
      <BurgerMenu />
     </HeaderDecoration>
