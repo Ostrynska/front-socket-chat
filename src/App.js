@@ -7,10 +7,7 @@ import { GlobalStyle } from './GlobalStyles';
 import { SharedLayout } from './components/SharedLayout/SharedLayout';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
-const MainPage = lazy(() => import('./pages/HomePage'));
 const ChatPage = lazy(() => import('./pages/ChatPage'));
-const BlogPage = lazy(() => import('./pages/BlogPage'));
-const BlogPostPage = lazy(() => import('./pages/BlogPostPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 function App() {
@@ -19,10 +16,7 @@ function App() {
    <ScrollToTop />
    <Routes>
     <Route path="/" element={<SharedLayout />}>
-     <Route index element={<MainPage />} />
-     <Route path="/chat" element={<ChatPage />} />
-     <Route path="/blog" element={<BlogPage />} />
-     <Route path="/blog/:id" element={<BlogPostPage />} />
+     <Route index element={<ChatPage />} />
      <Route path="*" element={<NotFoundPage />} />
     </Route>
    </Routes>
