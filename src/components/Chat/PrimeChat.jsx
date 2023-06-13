@@ -1,4 +1,4 @@
-import { io } from 'socket.io-client';
+import io from 'socket.io-client';
 import { useState, useEffect } from 'react';
 
 import 'react-perfect-scrollbar/dist/css/styles.css';
