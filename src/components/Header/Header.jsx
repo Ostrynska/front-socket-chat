@@ -9,10 +9,7 @@ import {
  LogoText,
  HeaderWrap,
  HeaderNav,
- MenuList,
- MenuItem,
- BtnWrap,
- Link,
+ //  BtnWrap,
  HeaderDecoration,
 } from './Header.styled';
 
@@ -22,41 +19,14 @@ const Header = () => {
    <Container>
     <HeaderDecoration>
      <HeaderNav>
-      <LogoLink to={'/'}>
+      <LogoLink to={'https://prime-chat.netlify.app/'}>
        <Logo />
        <LogoText>PrimeChat</LogoText>
       </LogoLink>
-      <MenuList>
-       <MenuItem>
-        <Link smooth to="/#about-us">
-         About Us
-        </Link>
-       </MenuItem>
-       <MenuItem>
-        <Link smooth to="/#platform">
-         Platform
-        </Link>
-       </MenuItem>
-       <MenuItem>
-        <Link smooth to="/#resources">
-         Resources
-        </Link>
-       </MenuItem>
-       <MenuItem>
-        <Link smooth to="/#solution">
-         Solution
-        </Link>
-       </MenuItem>
-       <MenuItem>
-        <Link smooth to="/#pricing">
-         Pricing
-        </Link>
-       </MenuItem>
-      </MenuList>
      </HeaderNav>
-     <BtnWrap>
+     <a a href="https://prime-chat.netlify.app/blog">
       <Button variant="secondary" text={'Blog'} />
-     </BtnWrap>
+     </a>
      <BurgerMenu />
     </HeaderDecoration>
    </Container>

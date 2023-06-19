@@ -1,7 +1,5 @@
 import { NavLink } from 'react-router-dom';
 
-import { HashLink } from 'react-router-hash-link';
-
 import styled from 'styled-components';
 import { mainVars } from '../../utils/theme';
 
@@ -42,59 +40,11 @@ export const HeaderNav = styled.div`
  justify-content: center;
 `;
 
-export const MenuList = styled.ul`
- display: none;
- @media screen and (min-width: 1200px) {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-  margin-left: 70px;
-  gap: 30px;
- }
- @media screen and (min-width: 1920px) {
-  margin-left: 263px;
-  gap: 45px;
- }
-`;
-
-export const MenuItem = styled.li`
- text-decoration: none;
- font-family: 'Inter', sans-serif;
- font-weight: 400;
- font-size: 16px;
- line-height: 1.61;
- text-transform: capitalize;
- transition: ${mainVars.transitions.main};
-
- color: ${mainVars.colors.headerColor};
- &:hover {
-  color: ${mainVars.colors.primaryColor};
-  font-weight: 500;
- }
- @media screen and (min-width: 1920px) {
-  font-size: 18px;
- }
-`;
-
-export const BtnWrap = styled.div`
+export const BtnWrap = styled(NavLink)`
  display: none;
  @media screen and (min-width: 1200px) {
   display: inline-block;
-  margin-left: 48px;
- }
- @media screen and (min-width: 1920px) {
-  margin-left: 115px;
- }
-`;
-
-export const Link = styled(HashLink)`
- text-decoration: none;
- transition: ${mainVars.transitions.main};
-
- color: ${mainVars.colors.headerColor};
- &:hover {
-  color: ${mainVars.colors.primaryColor};
-  font-weight: 500;
+  margin-left: auto;
  }
 `;
 
