@@ -36,6 +36,7 @@ import {
  WelcomeText,
  ExitForm,
  Online,
+ InputTextWrap,
 } from './Chat.styled';
 
 const socket = {
@@ -182,35 +183,54 @@ const PrimeChat = () => {
       </InputFormWrap>
      )}
 
-     <Scrollbars style={{ height: 650, width: '100%' }}>
-      <ChatBot>
-       <ChatBoxList>
-        {messageList.map((item, _id) => {
-         return (
-          <ChatBoxItem key={item._id}>
-           <ChatMessage>
-            <ChatUser>{item.name}</ChatUser>
-            <ChatText>{item.text}</ChatText>
-           </ChatMessage>
-           <ChatDate>{item.date}</ChatDate>
-          </ChatBoxItem>
-         );
-        })}
-       </ChatBoxList>
-      </ChatBot>
-     </Scrollbars>
+     {isNameSubmitted === true && (
+      <Scrollbars style={{ height: 420, width: '100%' }}>
+       <ChatBot>
+        <ChatBoxList>
+         {messageList.map((item, _id) => {
+          return (
+           <ChatBoxItem key={item._id}>
+            <ChatMessage>
+             <ChatUser>{item.name}</ChatUser>
+             <ChatText>{item.text}</ChatText>
+            </ChatMessage>
+            <ChatDate>{item.date}</ChatDate>
+           </ChatBoxItem>
+          );
+         })}
+        </ChatBoxList>
+       </ChatBot>
+      </Scrollbars>
+     )}
 
      <InputForm>
       <form>
-       <InputText
-        type="text"
-        value={message}
-        placeholder="Enter your message"
-        onChange={e => {
-         setMessage(e.currentTarget.value);
-        }}
-       />
-       <BtnForm onClick={handleSubmit}>SEND</BtnForm>
+       {isNameSubmitted === true ? (
+        <>
+         <InputText
+          type="text"
+          value={message}
+          placeholder="Enter your message"
+          onChange={e => {
+           setMessage(e.currentTarget.value);
+          }}
+         />
+         <BtnForm onClick={handleSubmit}>SEND</BtnForm>
+        </>
+       ) : (
+        <InputTextWrap>
+         <InputText
+          type="text"
+          value={message}
+          placeholder="Enter your message"
+          onChange={e => {
+           setMessage(e.currentTarget.value);
+          }}
+         />
+         <BtnForm onClick={handleSubmit}>SEND</BtnForm>
+        </InputTextWrap>
+       )}
+
        {isNameSubmitted === true && (
         <ExitForm onClick={handleReset}>
          <Exit />

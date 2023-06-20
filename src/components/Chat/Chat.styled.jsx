@@ -214,7 +214,6 @@ export const Input = styled.input`
 `;
 
 export const InputName = styled(Input)`
- width: 370px;
  background: linear-gradient(
   89.88deg,
   #d3d2ff 1.51%,
@@ -229,6 +228,12 @@ export const InputName = styled(Input)`
  &:focus {
   border: 1px solid ${mainVars.colors.primaryColor};
   color: ${mainVars.colors.titleColor};
+ }
+ @media screen and (min-width: 768px) {
+  width: 335px;
+ }
+ @media screen and (min-width: 1200px) {
+  width: 370px;
  }
 `;
 
@@ -316,7 +321,7 @@ export const BtnNameIcon = styled(IoCheckmarkCircleSharp)`
  position: absolute;
  width: 40px;
  height: 40px;
- left: 321px;
+ left: 257px;
  bottom: 21px;
  color: ${mainVars.colors.primaryColor};
  transition: ${mainVars.transitions.main};
@@ -324,6 +329,9 @@ export const BtnNameIcon = styled(IoCheckmarkCircleSharp)`
  &:hover,
  &:focus {
   color: ${mainVars.colors.secondaryColor};
+ }
+ @media screen and (min-width: 768px) {
+  left: 321px;
  }
 `;
 
@@ -424,5 +432,13 @@ export const ChatDate = styled.p`
  font-size: 12px;
  @media screen and (min-width: 1920px) {
   font-size: 16px;
+ }
+`;
+
+export const InputTextWrap = styled.div`
+ @media screen and (min-width: 1200px) {
+  margin-top: 410px;
+ }
+ @media screen and (min-width: 1920px) {
  }
 `;
