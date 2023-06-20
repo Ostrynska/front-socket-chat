@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
 
 import styled from 'styled-components';
 import { mainVars } from '../../utils/theme';
@@ -13,6 +12,25 @@ import {
 } from 'react-icons/ai';
 
 import { IoIosArrowDropupCircle } from 'react-icons/io';
+
+export const Map = styled.iframe`
+ display: none;
+ @media screen and (min-width: 768px) {
+  display: flex;
+  border: 0;
+  width: 550px;
+  height: 350px;
+ }
+
+ @media screen and (min-width: 1200px) {
+  width: 450px;
+  height: 350px;
+ }
+ @media screen and (min-width: 1920px) {
+  width: 820px;
+  height: 350px;
+ }
+`;
 
 export const Instagram = styled(AiOutlineInstagram)`
  color: ${mainVars.colors.iconColor};
@@ -70,33 +88,34 @@ export const FooterSection = styled.footer``;
 export const FooterWrap = styled.div`
  display: flex;
  flex-direction: column;
- @media screen and (min-width: 1200px) {
-  gap: 110px;
-  align-items: center;
-  flex-direction: row;
- }
- @media screen and (min-width: 1920px) {
-  gap: 120px;
- }
-`;
+ justify-content: space-between;
 
-export const FooterLogoWrap = styled.div`
  background: ${mainVars.colors.bgFooter};
  border-radius: 30px;
  padding: 20px 21px;
  width: 100%;
+
  @media screen and (min-width: 768px) {
   padding: 30px 31px;
  }
+
  @media screen and (min-width: 1200px) {
+  ${'' /* gap: 110px; */}
+  align-items: center;
+  flex-direction: row;
+
   padding: 40px 41px;
-  width: 443px;
+  ${'' /* width: 443px; */}
  }
  @media screen and (min-width: 1920px) {
+  ${'' /* gap: 120px; */}
+
   padding: 60px 61px;
-  width: 543px;
+  ${'' /* width: 543px; */}
  }
 `;
+
+export const FooterLogoWrap = styled.div``;
 
 export const FooterContactsWrap = styled.ul`
  margin-top: 40px;
@@ -135,61 +154,6 @@ export const LogoText = styled.p`
  color: ${mainVars.colors.headerColor};
 
  margin-left: 14px;
-`;
-
-export const FooterSupportWrap = styled.div`
- margin-top: 30px;
- @media screen and (min-width: 1200px) {
-  margin-top: 0px;
- }
-`;
-
-export const FooterSupportTitle = styled.h2`
- margin-bottom: 32px;
- font-family: 'Open Sans', sans-serif;
- font-weight: 700;
- font-size: 25px;
- line-height: 133.2%;
-
- text-transform: capitalize;
- color: ${mainVars.colors.headerColor};
-`;
-export const FooterSupportList = styled.ul`
- display: grid;
- grid-template-columns: repeat(2, 1.2fr);
- column-gap: 20px;
- row-gap: 2px;
- @media screen and (min-width: 1200px) {
-  column-gap: 140px;
-  row-gap: 5px;
- }
-`;
-
-export const FooterSupportItem = styled.li``;
-export const FooterSupportLink = styled(HashLink)`
- font-family: 'Inter', sans-serif;
- font-weight: 600;
- font-size: 20px;
- line-height: 248.5%;
-
- color: ${mainVars.colors.textColor};
- transition: ${mainVars.transitions.main};
- &:hover {
-  color: ${mainVars.colors.primaryColor};
- }
-`;
-
-export const FooterSupportLinkPage = styled(NavLink)`
- font-family: 'Inter', sans-serif;
- font-weight: 600;
- font-size: 20px;
- line-height: 248.5%;
-
- color: ${mainVars.colors.textColor};
- transition: ${mainVars.transitions.main};
- &:hover {
-  color: ${mainVars.colors.primaryColor};
- }
 `;
 
 export const FooterSocial = styled.div`

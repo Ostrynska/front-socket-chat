@@ -16,12 +16,6 @@ import {
  Youtube,
  UpToTop,
  FooterWrap,
- FooterSupportWrap,
- FooterSupportTitle,
- FooterSupportList,
- FooterSupportItem,
- FooterSupportLink,
- FooterSupportLinkPage,
  FooterSocialWrap,
  FooterSocialTitle,
  FooterSocialList,
@@ -31,6 +25,7 @@ import {
  FooterCopyrightText,
  FooterCopyrightSpan,
  FooterCopyright,
+ Map,
 } from './Footer.styled';
 
 import { ReactComponent as Logo } from '../../images/logo.svg';
@@ -41,7 +36,7 @@ const Footer = () => {
    <Container>
     <FooterWrap>
      <FooterLogoWrap>
-      <LogoLink to={'/'}>
+      <LogoLink to={'https://prime-chat.netlify.app/'}>
        <Logo />
        <LogoText>Primarily.</LogoText>
       </LogoLink>
@@ -68,57 +63,15 @@ const Footer = () => {
        </FooterContactsItem>
       </FooterContactsWrap>
      </FooterLogoWrap>
-
-     <FooterSupportWrap>
-      <FooterSupportTitle>Pages</FooterSupportTitle>
-      <nav>
-       <FooterSupportList>
-        <FooterSupportItem>
-         <FooterSupportLink smooth to="/#about-us">
-          About Us
-         </FooterSupportLink>
-        </FooterSupportItem>
-        <FooterSupportItem>
-         <FooterSupportLink smooth to="/#platform">
-          Platform
-         </FooterSupportLink>
-        </FooterSupportItem>
-        <FooterSupportItem>
-         <FooterSupportLink smooth to="/#resources">
-          Resources
-         </FooterSupportLink>
-        </FooterSupportItem>
-        <FooterSupportItem>
-         <FooterSupportLinkPage to={'/blog'}>Blog</FooterSupportLinkPage>
-        </FooterSupportItem>
-        <FooterSupportItem>
-         <FooterSupportLink smooth to="/#pricing">
-          Pricing
-         </FooterSupportLink>
-        </FooterSupportItem>
-        <FooterSupportItem>
-         <FooterSupportLink smooth to="/#integration">
-          Integration
-         </FooterSupportLink>
-        </FooterSupportItem>
-        <FooterSupportItem>
-         <FooterSupportLink smooth to="/#testimonials">
-          Testimonials
-         </FooterSupportLink>
-        </FooterSupportItem>
-        <FooterSupportItem>
-         <FooterSupportLink smooth to="/#permission">
-          Permission
-         </FooterSupportLink>
-        </FooterSupportItem>
-        <FooterSupportItem>
-         <FooterSupportLink smooth to="/#subscribe">
-          Subscribe
-         </FooterSupportLink>
-        </FooterSupportItem>
-       </FooterSupportList>
-      </nav>
-     </FooterSupportWrap>
+     <div>
+      <Map
+       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3065.3841100267387!2d-75.49972752375668!3d39.798374993042195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6e3623551c401%3A0x3d40fb3224e015d7!2zMTgxMSBTaWx2ZXJzaWRlIFJkLCBXaWxtaW5ndG9uLCBERSAxOTgxMCwg0KHQv9C-0LvRg9GH0LXQvdGWINCo0YLQsNGC0Lgg0JDQvNC10YDQuNC60Lg!5e0!3m2!1suk!2sua!4v1687169912318!5m2!1suk!2sua"
+       allowfullscreen=""
+       loading="lazy"
+       referrerpolicy="no-referrer-when-downgrade"
+       title="Map"
+      ></Map>
+     </div>
     </FooterWrap>
 
     <FooterSocialWrap>

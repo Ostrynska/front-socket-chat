@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { fallDown as Menu } from 'react-burger-menu';
 import { RxHamburgerMenu } from 'react-icons/rx';
 
-import { Button } from '../Button/Button';
+// import { Button } from '../Button/Button';
 import {
  MenuLink,
  BurgerMenuStyles,
@@ -59,7 +59,7 @@ const BurgerMenu = () => {
       </MenuLink>
      </MenuItem>
     </MenuList>
-    <Button variant="secondary" text={'Login'} />
+    {/* <Button variant="secondary" text={'Login'} /> */}
    </Menu>
   </BurgerMenuContainer>
  );

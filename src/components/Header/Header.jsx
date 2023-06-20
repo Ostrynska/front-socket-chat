@@ -1,5 +1,4 @@
 import { Container } from '../Container/Conteiner';
-import { Button } from '../Button/Button';
 
 import BurgerMenu from '../Menu/Menu';
 import { ReactComponent as Logo } from '../../images/logo.svg';
@@ -9,7 +8,8 @@ import {
  LogoText,
  HeaderWrap,
  HeaderNav,
- //  BtnWrap,
+ BtnWrap,
+ Button,
  HeaderDecoration,
 } from './Header.styled';
 
@@ -24,9 +24,9 @@ const Header = () => {
        <LogoText>PrimeChat</LogoText>
       </LogoLink>
      </HeaderNav>
-     <a a href="https://prime-chat.netlify.app/blog">
-      <Button variant="secondary" text={'Blog'} />
-     </a>
+     <BtnWrap to={'https://prime-chat.netlify.app/blog'}>
+      <Button>Blog</Button>
+     </BtnWrap>
      <BurgerMenu />
     </HeaderDecoration>
    </Container>
