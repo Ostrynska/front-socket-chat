@@ -1,8 +1,7 @@
 import io from 'socket.io-client';
 import { useState, useEffect } from 'react';
 
-import 'react-perfect-scrollbar/dist/css/styles.css';
-import PerfectScrollbar from 'react-perfect-scrollbar';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 import { AvatarGenerator } from 'random-avatar-generator';
 import toast from 'react-hot-toast';
@@ -135,7 +134,7 @@ const PrimeChat = () => {
     {usersList.length === 0 ? (
      <UserList width={296} height={431} />
     ) : (
-     <PerfectScrollbar>
+     <Scrollbars style={{ height: '100%', width: 308 }}>
       <OnlineUser>
        <OnlineUserList>
         {usersList.map((user, id) => {
@@ -159,7 +158,7 @@ const PrimeChat = () => {
         })}
        </OnlineUserList>
       </OnlineUser>
-     </PerfectScrollbar>
+     </Scrollbars>
     )}
 
     <div>
@@ -183,7 +182,7 @@ const PrimeChat = () => {
       </InputFormWrap>
      )}
 
-     <PerfectScrollbar>
+     <Scrollbars style={{ height: 650, width: '100%' }}>
       <ChatBot>
        <ChatBoxList>
         {messageList.map((item, _id) => {
@@ -199,7 +198,7 @@ const PrimeChat = () => {
         })}
        </ChatBoxList>
       </ChatBot>
-     </PerfectScrollbar>
+     </Scrollbars>
 
      <InputForm>
       <form>

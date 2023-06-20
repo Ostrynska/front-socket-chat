@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { fallDown as Menu } from 'react-burger-menu';
 import { RxHamburgerMenu } from 'react-icons/rx';
 
-// import { Button } from '../Button/Button';
 import {
  MenuLink,
  BurgerMenuStyles,
@@ -34,32 +33,19 @@ const BurgerMenu = () => {
    >
     <MenuList>
      <MenuItem>
-      <MenuLink onClick={() => closeMenu()} smooth to="/#about-us">
-       About Us
+      <MenuLink onClick={() => closeMenu()} to="https://prime-chat.netlify.app">
+       Home
       </MenuLink>
      </MenuItem>
      <MenuItem>
-      <MenuLink onClick={() => closeMenu()} smooth to="/#platform">
-       Platform
-      </MenuLink>
-     </MenuItem>
-     <MenuItem>
-      <MenuLink onClick={() => closeMenu()} smooth to="/#resources">
-       Resources
-      </MenuLink>
-     </MenuItem>
-     <MenuItem>
-      <MenuLink onClick={() => closeMenu()} smooth to="/#solution">
-       Solution
-      </MenuLink>
-     </MenuItem>
-     <MenuItem>
-      <MenuLink onClick={() => closeMenu()} smooth to="/#pricing">
-       Pricing
+      <MenuLink
+       onClick={() => closeMenu()}
+       to="https://prime-chat.netlify.app/blog"
+      >
+       Blog
       </MenuLink>
      </MenuItem>
     </MenuList>
-    {/* <Button variant="secondary" text={'Login'} /> */}
    </Menu>
   </BurgerMenuContainer>
  );

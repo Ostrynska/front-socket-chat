@@ -18,7 +18,7 @@ export const Map = styled.iframe`
  @media screen and (min-width: 768px) {
   display: flex;
   border: 0;
-  width: 550px;
+  width: 415px;
   height: 350px;
  }
 
@@ -96,22 +96,19 @@ export const FooterWrap = styled.div`
  width: 100%;
 
  @media screen and (min-width: 768px) {
+  gap: 40px;
   padding: 30px 31px;
  }
 
  @media screen and (min-width: 1200px) {
-  ${'' /* gap: 110px; */}
+  gap: 0;
   align-items: center;
   flex-direction: row;
 
   padding: 40px 41px;
-  ${'' /* width: 443px; */}
  }
  @media screen and (min-width: 1920px) {
-  ${'' /* gap: 120px; */}
-
   padding: 60px 61px;
-  ${'' /* width: 543px; */}
  }
 `;
 
@@ -135,6 +132,9 @@ export const FooterContactsLink = styled.a`
  line-height: 160%;
 
  color: ${mainVars.colors.textColor};
+ &:hover {
+  color: ${mainVars.colors.primaryColor};
+ }
 `;
 
 export const FooterContactsSpan = styled.span`
@@ -228,6 +228,7 @@ export const FooterCopyrightWrap = styled.div`
  max-width: 751px;
  border-top: 1px solid ${mainVars.colors.lineColor};
  @media screen and (min-width: 1200px) {
+  border-top: 0;
   margin-left: 180px;
  }
  @media screen and (min-width: 1920px) {
