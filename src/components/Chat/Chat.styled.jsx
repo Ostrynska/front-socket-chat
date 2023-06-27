@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { mainVars } from '../../utils/theme';
 
 import { IoCheckmarkCircleSharp } from 'react-icons/io5';
