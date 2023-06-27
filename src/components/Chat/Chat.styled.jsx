@@ -356,19 +356,17 @@ export const ChatBoxList = styled.ul`
 
 export const ChatBoxItem = styled.li`
  display: flex;
- ${'' /* align-items: flex-end; */}
+ align-items: flex-end;
  margin-bottom: 10px;
  ${props =>
   props.sent &&
   css`
-   ${'' /* background-color: lightblue; */}
    align-self: flex-end;
   `}
 
  ${props =>
   props.received &&
   css`
-   ${'' /* background-color: lightgreen; */}
    align-self: flex-start;
   `}
  @media screen and (min-width: 1200px) {
