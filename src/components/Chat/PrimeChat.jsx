@@ -188,8 +188,9 @@ const PrimeChat = () => {
        <ChatBot>
         <ChatBoxList>
          {messageList.map((item, _id) => {
+          const isSent = item.name === user;
           return (
-           <ChatBoxItem key={item._id}>
+           <ChatBoxItem key={item._id} sent={isSent} received={!isSent}>
             <ChatMessage>
              <ChatUser>{item.name}</ChatUser>
              <ChatText>{item.text}</ChatText>
